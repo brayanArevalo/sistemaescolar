@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vista;
 
 import java.awt.BorderLayout;
@@ -10,11 +5,8 @@ import java.awt.Color;
 import javax.swing.JPanel;
 import principal.MyButton;
 
-/**
- *
- * @author AREVALO
- */
 public class VentanaInicio extends javax.swing.JFrame {
+
     public boolean bandera;
 
     /**
@@ -22,14 +14,8 @@ public class VentanaInicio extends javax.swing.JFrame {
      */
     public VentanaInicio() {
         initComponents();
-        
-        if (btnInicio.isSelected()) {
-            btnInicio.setBackground(new Color(11, 94, 215));
-        }
-        MostrarPanel(new Inicio());
-        System.out.println(contenido.getSize());
     }
-    
+
     private void pruebaRecibida(MyButton b) {
         String prueba = b.getText();
         switch (prueba) {
@@ -185,10 +171,10 @@ public class VentanaInicio extends javax.swing.JFrame {
                 btnAreas.setSelected(false);
                 btnInicio.setSelected(false);
                 break;
-            
+
         }
     }
-    
+
     private void MostrarPanel(JPanel p) {
         //p.setSize(825, 568);
         p.setSize(contenido.getWidth(), contenido.getHeight());
@@ -197,7 +183,7 @@ public class VentanaInicio extends javax.swing.JFrame {
         contenido.add(p, BorderLayout.CENTER);
         contenido.revalidate();
         contenido.repaint();
-        
+
     }
 
     /**
@@ -215,11 +201,11 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnCursos = new principal.MyButton();
         btnEstudiantes = new principal.MyButton();
         btnProfesores = new principal.MyButton();
-        btnAreas = new principal.MyButton();
         btnAsignaturas = new principal.MyButton();
         btnCalificaciones = new principal.MyButton();
         btnBoletin = new principal.MyButton();
         btnInicio = new principal.MyButton();
+        btnAreas = new principal.MyButton();
         cabecera = new javax.swing.JPanel();
         cerrar = new principal.MyButton();
         minimizar = new principal.MyButton();
@@ -247,11 +233,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnCursos.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnCursos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnCursos.setIconTextGap(10);
-        btnCursos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCursosActionPerformed(evt);
-            }
-        });
 
         btnEstudiantes.setBackground(new java.awt.Color(3, 61, 149));
         btnEstudiantes.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
@@ -261,11 +242,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnEstudiantes.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnEstudiantes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnEstudiantes.setIconTextGap(10);
-        btnEstudiantes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEstudiantesActionPerformed(evt);
-            }
-        });
 
         btnProfesores.setBackground(new java.awt.Color(3, 61, 149));
         btnProfesores.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
@@ -275,25 +251,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnProfesores.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnProfesores.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnProfesores.setIconTextGap(10);
-        btnProfesores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnProfesoresActionPerformed(evt);
-            }
-        });
-
-        btnAreas.setBackground(new java.awt.Color(3, 61, 149));
-        btnAreas.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
-        btnAreas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/areas.png"))); // NOI18N
-        btnAreas.setText("Areas");
-        btnAreas.setColorNormal(new java.awt.Color(3, 61, 149));
-        btnAreas.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        btnAreas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnAreas.setIconTextGap(10);
-        btnAreas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAreasActionPerformed(evt);
-            }
-        });
 
         btnAsignaturas.setBackground(new java.awt.Color(3, 61, 149));
         btnAsignaturas.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
@@ -303,11 +260,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnAsignaturas.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnAsignaturas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnAsignaturas.setIconTextGap(10);
-        btnAsignaturas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAsignaturasActionPerformed(evt);
-            }
-        });
 
         btnCalificaciones.setBackground(new java.awt.Color(3, 61, 149));
         btnCalificaciones.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
@@ -317,11 +269,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnCalificaciones.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnCalificaciones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnCalificaciones.setIconTextGap(10);
-        btnCalificaciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCalificacionesActionPerformed(evt);
-            }
-        });
 
         btnBoletin.setBackground(new java.awt.Color(3, 61, 149));
         btnBoletin.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
@@ -331,11 +278,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnBoletin.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         btnBoletin.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnBoletin.setIconTextGap(10);
-        btnBoletin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBoletinActionPerformed(evt);
-            }
-        });
 
         btnInicio.setBackground(new java.awt.Color(3, 61, 149));
         btnInicio.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
@@ -348,16 +290,15 @@ public class VentanaInicio extends javax.swing.JFrame {
         btnInicio.setLabel("Inicio");
         btnInicio.setMargin(new java.awt.Insets(2, 100, 2, 100));
         btnInicio.setSelected(true);
-        btnInicio.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnInicioMouseExited(evt);
-            }
-        });
-        btnInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInicioActionPerformed(evt);
-            }
-        });
+
+        btnAreas.setBackground(new java.awt.Color(3, 61, 149));
+        btnAreas.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
+        btnAreas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/areas.png"))); // NOI18N
+        btnAreas.setText("Areas");
+        btnAreas.setColorNormal(new java.awt.Color(3, 61, 149));
+        btnAreas.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        btnAreas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnAreas.setIconTextGap(10);
 
         javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
         menu.setLayout(menuLayout);
@@ -368,13 +309,13 @@ public class VentanaInicio extends javax.swing.JFrame {
                     .addComponent(btnCursos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEstudiantes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnProfesores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAreas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAsignaturas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalificaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBoletin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(menuLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1))
+                    .addComponent(btnAreas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(btnInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -411,11 +352,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         cerrar.setColorHover(new java.awt.Color(255, 0, 0));
         cerrar.setColorNormal(new java.awt.Color(255, 255, 255));
         cerrar.setColorTextNormal(new java.awt.Color(0, 0, 0));
-        cerrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cerrarActionPerformed(evt);
-            }
-        });
 
         minimizar.setBackground(new java.awt.Color(255, 255, 255));
         minimizar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 15, 1));
@@ -426,11 +362,6 @@ public class VentanaInicio extends javax.swing.JFrame {
         minimizar.setColorNormal(new java.awt.Color(255, 255, 255));
         minimizar.setColorTextNormal(new java.awt.Color(0, 0, 0));
         minimizar.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-        minimizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                minimizarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout cabeceraLayout = new javax.swing.GroupLayout(cabecera);
         cabecera.setLayout(cabeceraLayout);
@@ -451,7 +382,7 @@ public class VentanaInicio extends javax.swing.JFrame {
                 .addGap(0, 50, Short.MAX_VALUE))
         );
 
-        contenido.setBackground(new java.awt.Color(153, 0, 204));
+        contenido.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout contenidoLayout = new javax.swing.GroupLayout(contenido);
         contenido.setLayout(contenidoLayout);
@@ -499,157 +430,26 @@ public class VentanaInicio extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void minimizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minimizarActionPerformed
-        // TODO add your handling code here:
-        this.setExtendedState(1);
-    }//GEN-LAST:event_minimizarActionPerformed
-
-    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_cerrarActionPerformed
-
-    private void btnCursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCursosActionPerformed
-        MostrarPanel(new Cursos());
-        pruebaRecibida(btnCursos);
-//        btnCursos.setSelected(true);
-//        if (btnCursos.isSelected()) {
-//            btnCursos.setBackground(new Color(11, 94, 215));
-//            btnInicio.setBackground(btnInicio.getColorNormal());
-//            btnAsignaturas.setBackground(btnAsignaturas.getColorNormal());
-//            btnCalificaciones.setBackground(btnCalificaciones.getColorNormal());
-//            btnProfesores.setBackground(btnProfesores.getColorNormal());
-//            btnEstudiantes.setBackground(btnEstudiantes.getColorNormal());
-//            btnAreas.setBackground(btnAreas.getColorNormal());
-//            btnBoletin.setBackground(btnBoletin.getColorNormal());
-//
-//            //SELECTED FALSE
-//            btnInicio.setSelected(false);
-//            btnAsignaturas.setSelected(false);
-//            btnCalificaciones.setSelected(false);
-//            btnProfesores.setSelected(false);
-//            btnEstudiantes.setSelected(false);
-//            btnAreas.setSelected(false);
-//            btnBoletin.setSelected(false);
-//        }
-
-
-    }//GEN-LAST:event_btnCursosActionPerformed
-
-    private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
-        MostrarPanel(new Inicio());
-
-//        btnInicio.setSelected(true);
-//        if (btnInicio.isSelected()) {
-//            btnInicio.setBackground(new Color(11, 94, 215));
-//            //BACKGROUND NORMAL            
-//            btnCursos.setBackground(btnCursos.getColorNormal());
-//            btnAsignaturas.setBackground(btnAsignaturas.getColorNormal());
-//            btnCalificaciones.setBackground(btnCalificaciones.getColorNormal());
-//            btnProfesores.setBackground(btnProfesores.getColorNormal());
-//            btnEstudiantes.setBackground(btnEstudiantes.getColorNormal());
-//            btnAreas.setBackground(btnAreas.getColorNormal());
-//            btnBoletin.setBackground(btnBoletin.getColorNormal());
-//            //SELECTED FALSE
-//            btnCursos.setSelected(false);
-//            btnAsignaturas.setSelected(false);
-//            btnCalificaciones.setSelected(false);
-//            btnProfesores.setSelected(false);
-//            btnEstudiantes.setSelected(false);
-//            btnAreas.setSelected(false);
-//            btnBoletin.setSelected(false);
-//        }
-        pruebaRecibida(btnInicio);
-        
-
-    }//GEN-LAST:event_btnInicioActionPerformed
-    
-
-    private void btnEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstudiantesActionPerformed
-        MostrarPanel(new Estudiantes());
-        pruebaRecibida(btnEstudiantes);
-    }//GEN-LAST:event_btnEstudiantesActionPerformed
-
-    private void btnProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProfesoresActionPerformed
-        MostrarPanel(new Profesores());
-        pruebaRecibida(btnProfesores);
-    }//GEN-LAST:event_btnProfesoresActionPerformed
-
-    private void btnAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAreasActionPerformed
-        MostrarPanel(new Areas());
-        pruebaRecibida(btnAreas);
-    }//GEN-LAST:event_btnAreasActionPerformed
-
-    private void btnAsignaturasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsignaturasActionPerformed
-        MostrarPanel(new Asignaturas());
-        pruebaRecibida(btnAsignaturas);
-    }//GEN-LAST:event_btnAsignaturasActionPerformed
-
-    private void btnCalificacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalificacionesActionPerformed
-        MostrarPanel(new Calificaciones());
-        pruebaRecibida(btnCalificaciones);
-    }//GEN-LAST:event_btnCalificacionesActionPerformed
-
-    private void btnBoletinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoletinActionPerformed
-        MostrarPanel(new Boletines());
-        pruebaRecibida(btnBoletin);
-    }//GEN-LAST:event_btnBoletinActionPerformed
-
-    private void btnInicioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInicioMouseExited
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_btnInicioMouseExited
-
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VentanaInicio().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private principal.MyButton btnAreas;
-    private principal.MyButton btnAsignaturas;
-    private principal.MyButton btnBoletin;
-    private principal.MyButton btnCalificaciones;
-    private principal.MyButton btnCursos;
-    private principal.MyButton btnEstudiantes;
-    private principal.MyButton btnInicio;
-    private principal.MyButton btnProfesores;
+    public principal.MyButton btnAreas;
+    public principal.MyButton btnAsignaturas;
+    public principal.MyButton btnBoletin;
+    public principal.MyButton btnCalificaciones;
+    public principal.MyButton btnCursos;
+    public principal.MyButton btnEstudiantes;
+    public principal.MyButton btnInicio;
+    public principal.MyButton btnProfesores;
     private javax.swing.JPanel cabecera;
-    private principal.MyButton cerrar;
-    private javax.swing.JPanel contenido;
+    public principal.MyButton cerrar;
+    public javax.swing.JPanel contenido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel menu;
-    private principal.MyButton minimizar;
+    public principal.MyButton minimizar;
     // End of variables declaration//GEN-END:variables
 }
